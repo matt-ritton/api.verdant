@@ -56,7 +56,7 @@ def predict(image_path):
     Parameters:
     image_path (str): Path to the image file.
     Returns:
-    int: Predicted class index.
+    dict: Predicted class index.
     """
 
     # Load and preprocess the image
@@ -70,5 +70,11 @@ def predict(image_path):
     # Get the predicted label
     predicted_class_name = labels[predicted_class]
 
-    return predicted_class_name
+    confidence = float(pred[0][predicted_class])
+
+    # Combine the predicted class and confidence into a dictionary
+    result = dict(predicted_class_name)
+    result["confidence"] = confidence
+
+    return result
 

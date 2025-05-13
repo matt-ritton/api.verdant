@@ -32,12 +32,13 @@ def photo_upload():
         image_path = os.path.join(app.config["UPLOAD_FOLDER"], image_file.filename)
         image_file.save(image_path)
 
-        predicted_class = predict(image_path)  # Call the prediction function
+        # Call the prediction function
+        predicted_class = predict(image_path)
 
         # Remove the image after prediction
         os.remove(image_path)
 
-        return jsonify({'message': 'Predicted class: ' + predicted_class})
+        return jsonify({'message': predicted_class})
     
     except Exception as e:
         return jsonify({'message': 'Error uploading photo!'})
