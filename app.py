@@ -1,5 +1,6 @@
 # Description: This is the main file for the Flask application. It contains the routes for the API.
 
+import json
 from flask import Flask, jsonify, request
 from flask_cors import CORS
 import os
@@ -22,6 +23,19 @@ if not os.path.exists(UPLOAD_FOLDER):
 def hello_world():
     return 'Hello, World!'
 
+# Route to get the list of phytopathologies
+@app.route('/get_phytopathologies', methods=['GET'])
+def get_phytopathologies():
+    try:
+        # Load the JSON file containing the class names
+        with open("./resources/data/phytopathologies.pt.json", "r", encoding="utf-8") as f:
+            labels = json.load(f)
+        
+        return jsonify(labels), 200
+    
+    except Exception as e:
+        return jsonify({'message': 'Error loading phytopathologies!'}), 500
+
 # Photo upload route
 @app.route('/image_upload', methods=['POST'])
 def photo_upload():
@@ -38,10 +52,10 @@ def photo_upload():
         # Remove the image after prediction
         os.remove(image_path)
 
-        return jsonify({'message': predicted_class})
+        return jsonify({'message': predicted_class}), 200
     
     except Exception as e:
-        return jsonify({'message': 'Error uploading photo!'})
+        return jsonify({'message': 'Error uploading photo!'}), 500
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5000)

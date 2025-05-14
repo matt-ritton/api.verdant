@@ -1,0 +1,23 @@
+{
+	"version": "1.0",
+	"phytopathologies": [
+		{
+			"label": "Batata: Alternariose",
+			"scientific_name": "Alternaria solani",
+			"type": "Fungo",
+			"description": "A Alternariose é uma doença comum da batata causada pelo fungo Alternaria solani, caracterizada por manchas escuras com anéis concêntricos nas folhas."
+		},
+		{
+			"label": "Batata: Requeima",
+			"scientific_name": "Phytophthora infestans",
+			"type": "Oomiceto",
+			"description": "A requeima é uma doença grave da batata causada por Phytophthora infestans, levando a grandes lesões escuras e encharcadas nas folhas e tubérculos."
+		},
+		{
+			"label": "Batata: Saudável",
+			"scientific_name": "Solanum tuberosum",
+			"type": "Saudável",
+			"description": "Folha de batata saudável sem sintomas visíveis de doenças ou infestação de pragas."
+		}
+  	]
+}

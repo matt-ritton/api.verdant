@@ -1,0 +1,23 @@
+{
+	"version": "1.0",
+	"phytopathologies": [
+		{
+			"label": "Early blight",
+			"scientific_name": "Alternaria solani",
+			"type": "Fungal",
+			"description": "Early blight is a common potato disease caused by the fungus Alternaria solani, characterized by dark spots with concentric rings on leaves."
+		},
+		{
+			"label": "Potato Late blight",
+			"scientific_name": "Phytophthora infestans",
+			"type": "Oomycete",
+			"description": "Late blight is a serious potato disease caused by Phytophthora infestans, leading to large, dark, water-soaked lesions on leaves and tubers."
+		},
+		{
+			"label": "Potato healthy",
+			"scientific_name": "Solanum tuberosum",
+			"type": "Healthy",
+			"description": "Healthy potato leaf with no visible symptoms of disease or pest infestation."
+		}
+	]
+}

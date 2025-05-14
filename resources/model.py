@@ -10,8 +10,11 @@ loaded_model = tf.keras.models.load_model("./resources/model.h5")
 # loaded_model.summary()
 
 # Check class names
-with open("./resources/labels.json", "r") as f:
-    labels = json.load(f)
+with open("./resources/data/phytopathologies.pt.json", "r", encoding="utf-8") as f:
+    phytopathologies_data = json.load(f)
+
+# Extract class names from the JSON data
+labels = phytopathologies_data["phytopathologies"]
 
 # Function to load an image and resize it for model input
 def load_and_prep_image(filename, img_shape=224):
@@ -68,13 +71,15 @@ def predict(image_path):
     predicted_class = tf.argmax(pred, axis=1).numpy()[0]
     
     # Get the predicted label
-    predicted_class_name = labels[predicted_class]
+    predicted_class_name = labels[predicted_class]["label"]
 
     confidence = float(pred[0][predicted_class])
 
     # Combine the predicted class and confidence into a dictionary
-    result = dict(predicted_class_name)
-    result["confidence"] = confidence
+    result = {
+        "label": predicted_class_name,
+        "confidence": confidence,
+    }
 
     return result
 
