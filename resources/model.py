@@ -4,7 +4,7 @@ import tensorflow as tf
 import json
 
 # Load model
-loaded_model = tf.keras.models.load_model("./resources/model.h5")
+loaded_model = tf.keras.models.load_model("./resources/model-inceptionv4.keras")
 
 # Check if the model is loaded correctly
 # loaded_model.summary()
