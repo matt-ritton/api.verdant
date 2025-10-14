@@ -4,13 +4,13 @@ import tensorflow as tf
 import json
 
 # Load model
-loaded_model = tf.keras.models.load_model("./resources/model-inceptionv4.keras")
+loaded_model = tf.keras.models.load_model("./resources/model.h5")
 
 # Check if the model is loaded correctly
 # loaded_model.summary()
 
 # Check class names
-with open("./resources/data/phytopathologies.pt.json", "r", encoding="utf-8") as f:
+with open("./resources/data/dictionary.pt.json", "r", encoding="utf-8") as f:
     phytopathologies_data = json.load(f)
 
 # Extract class names from the JSON data

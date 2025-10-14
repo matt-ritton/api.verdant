@@ -24,11 +24,11 @@ def hello_world():
     return 'Hello, World!'
 
 # Route to get the list of phytopathologies
-@app.route('/get_phytopathologies', methods=['GET'])
-def get_phytopathologies():
+@app.route('/get_dictionary', methods=['GET'])
+def get_dictionary():
     try:
         # Load the JSON file containing the class names
-        with open("./resources/data/phytopathologies.pt.json", "r", encoding="utf-8") as f:
+        with open("./resources/data/dictionary.pt.json", "r", encoding="utf-8") as f:
             labels = json.load(f)
         
         return jsonify(labels), 200
