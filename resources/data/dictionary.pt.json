@@ -2,22 +2,37 @@
 	"version": "1.0",
 	"phytopathologies": [
 		{
+			"id": "potato_early-blight",
 			"label": "Batata: Alternariose",
 			"scientific_name": "Alternaria solani",
 			"type": "Fungo",
-			"description": "A Alternariose é uma doença comum da batata causada pelo fungo Alternaria solani, caracterizada por manchas escuras com anéis concêntricos nas folhas."
+			"images": {
+				"cover": "https://us-west-2.graphassets.com/cmaz95zma0fki07mv32xlep12/cmiatolopsh8r08lpmqrxvd1t",
+				"image2": "https://us-west-2.graphassets.com/cmaz95zma0fki07mv32xlep12/cmiatolp2sqts07lj49zg1i6r"
+			},
+			"description": "<h3>Sintomas</h3><ul><li>Manchas escuras nas folhas, com círculos que parecem “alvo” ou “olho de boi”; e amarelamento ao redor das manchas.</li><li>Folhas secando e caindo antes do tempo.</li><li>Manchas escuras na casca da batata.</li></ul><p>A Alternariose, também conhecida como mancha-de-alternária ou pinta-preta, é uma doença causada por um fungo que ataca principalmente as folhas e, às vezes, os próprios tubérculos (as batatas). Ela costuma aparecer quando o clima está quente e úmido, especialmente depois de chuvas ou irrigação frequente. A doença também se espalha fácil: o vento, a água da chuva, ferramentas, solo e restos de plantas doentes podem carregar o fungo.</p><p>O primeiro sinal geralmente são manchas escuras nas folhas. Essas manchas têm círculos dentro delas, parecendo um “alvo”. Com o tempo, as folhas amarelarem e podem secar e cair. Quando isso acontece em muitas plantas, a batata produz menos, porque perde folhas que são importantes para seu crescimento. Em alguns casos, as batatas também podem ficar com manchas escuras na casca, o que prejudica sua aparência e a conservação.</p>"
 		},
 		{
+			"id": "potato_late-blight",
 			"label": "Batata: Requeima",
 			"scientific_name": "Phytophthora infestans",
 			"type": "Oomiceto",
-			"description": "A requeima é uma doença grave da batata causada por Phytophthora infestans, levando a grandes lesões escuras e encharcadas nas folhas e tubérculos."
+			"images": {
+				"cover": "https://us-west-2.graphassets.com/cmaz95zma0fki07mv32xlep12/cmiatkd3jsngn07lj3wxab09x",
+				"image2": "https://us-west-2.graphassets.com/cmaz95zma0fki07mv32xlep12/cmiatkd3ssngt07ljjh1xn5hx"
+			},
+			"description": "<body><h2>Sintomas</h2><ul><li>Manchas grandes, escuras e com aparência “molhada” nas folhas.</li><li>Folhas murchando e escurecendo rapidamente.</li><li>Caules escurecidos e apodrecendo.</li><li>Batatas com polpa marrom e, às vezes, cheiro forte.</li></ul><p>A Requeima, também conhecida como mela, queima-das-folhas ou míldio-tardio, é uma das doenças mais graves da batata. Ela é causada por um microrganismo que se espalha muito rápido quando o clima está úmido e frio, principalmente após períodos de chuva, neblina ou irrigação forte. A Requeima se espalha pelo vento, pela água e por restos de plantas doentes deixados no solo.</p><p>Os primeiros sinais aparecem nas folhas, que ganham manchas grandes, escuras e com aparência de estarem “molhadas”. Essas manchas aumentam rápido e podem fazer a planta murchar e morrer em pouco tempo. Os caules também podem escurecer e apodrecer.</p><p>Quando a doença chega às batatas, elas podem apresentar manchas escuras por dentro, com a polpa ficando marrom e às vezes com cheiro forte. Isso faz com que se percam na colheita e no armazenamento.</p></body>"
 		},
 		{
+			"id": "potato_healthy",
 			"label": "Batata: Saudável",
 			"scientific_name": "Solanum tuberosum",
-			"type": "Saudável",
-			"description": "Folha de batata saudável sem sintomas visíveis de doenças ou infestação de pragas."
+			"type": "Outro",
+			"images": {
+				"cover": "https://us-west-2.graphassets.com/cmaz95zma0fki07mv32xlep12/cmiasv6uyrtp408lpze61t6c3",
+				"image2": "https://us-west-2.graphassets.com/cmaz95zma0fki07mv32xlep12/cmiasv6v4rtp908lp5mak8s1e"
+			},
+			"description": "Folhas saudáveis de batata são firmes, verdes e sem manchas. Elas devem ter uma cor uniforme, sem pontos escuros, áreas amareladas, furos ou partes secas."
 		}
   	]
 }
